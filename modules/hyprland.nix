@@ -9,7 +9,7 @@
 			enable = true;
 	
 			settings = {
-				"$terminal" = "alacritty";
+				"$terminal" = "kitty";
 				"$fileManager" = "dolphin";
 				"$menu" = "rofi -show drun -show-icons";
 	
