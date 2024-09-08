@@ -1,0 +1,107 @@
+/**
+ * Originally Nordic rofi theme
+ * Adapted by undiabler <undiabler@gmail.com>
+ * Adapted by pantonius <contact@pantonius.dev>
+ */
+
+
+* {
+      text: #ffffff;
+      text-soft: #dddddd;
+      background: #121212;
+      backlight: #121212aa;
+      primary: #2df598;
+      secondary: #22cf7e;
+      accent: #8b8484;
+    
+    background-color: @backlight;
+}
+
+window {
+    location: center;
+    anchor:   center;
+    transparency: "screenshot";
+    padding: 10px;
+    border:  0px;
+    border-radius: 6px;
+
+    background-color: transparent;
+    spacing: 0;
+    children:  [mainbox];
+    orientation: horizontal;
+}
+
+mainbox {
+    spacing: 0;
+    children: [ inputbar, message, listview ];
+}
+
+message {
+    color: @text-soft;
+    padding: 5;
+    border-color: @primary;
+    border:  0px 2px 2px 2px;
+    background-color: @background;
+}
+
+inputbar {
+    color: @text;
+    padding: 11px;
+    background-color: @background;
+
+    border: 1px;
+    border-radius:  6px 6px 0px 0px;
+    border-color: @primary;
+}
+
+entry, prompt, case-indicator {
+    text-font: inherit;
+    text-color:inherit;
+}
+
+prompt {
+    margin: 0px 1em 0em 0em ;
+}
+
+listview {
+    padding: 8px;
+    border-radius: 0px 0px 6px 6px;
+    border-color: @primary;
+    border: 0px 1px 1px 1px;
+    background-color: @backlight;
+    dynamic: false;
+}
+
+element {
+    padding: 3px;
+    vertical-align: 0.5;
+    border-radius: 4px;
+    background-color: transparent;
+    color: @primary;
+    text-color: @text;
+}
+
+element selected.normal {
+	background-color: @secondary;
+	text-color: @background;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+button {
+    padding: 6px;
+    color: @primary;
+    horizontal-align: 0.5;
+
+    border: 2px 0px 2px 2px;
+    border-radius: 4px 0px 0px 4px;
+    border-color: @primary;
+}
+
+button selected normal {
+    border: 2px 0px 2px 2px;
+    border-color: @primary;
+}
