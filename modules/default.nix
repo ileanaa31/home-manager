@@ -1,9 +1,10 @@
 {
   imports = [
+    ./gtk.nix
     ./hyprland.nix
     ./hyprlock.nix
-    ./rofi.nix
-    ./gtk.nix
+    ./kitty.nix
     ./nixvim.nix
+    ./rofi.nix
   ];
 }

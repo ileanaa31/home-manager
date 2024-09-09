@@ -7,11 +7,12 @@
   home.homeDirectory = "/home/anton";
 
   # Some modules of my own
+  gtkTheme.enable = true;
   hyprland.enable = true;
   hyprlock.enable = true;
-  rofi.enable = true;
-  gtkTheme.enable = true;
+  kitty.enable = true;
   nixvim.enable = true;
+  rofi.enable = true;
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
