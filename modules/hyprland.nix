@@ -117,7 +117,8 @@
 					"$mainMod CTRL, left, movewindow, l"
 					"$mainMod CTRL, right, movewindow, r"
 					"$mainMod CTRL, up, movewindow, u"
-					"$mainMode CTRL, down, movewindow, d"
+					"$mainMod CTRL, down, movewindow, d"
+					
 	
 					"$mainMod, left, movefocus, l"
 					"$mainMod, right, movefocus, r"
@@ -146,14 +147,22 @@
 	        			"$mainMod SHIFT, 9, movetoworkspace, 9"
 	        			"$mainMod SHIFT, 0, movetoworkspace, 10"
 	
-					", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-					", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
 					", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 					", XF86AudioPlay, exec, playerctl play-pause"
 					", XF86AudioPrev, exec, playerctl previous"
 					", XF86AudioNext, exec, playerctl next"
 	
 					", Print, exec, grim -g \"$(slurp)\" - | wl-copy"
+				];
+
+				bindle = [
+					", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
+					", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-"
+				];
+
+				bindm = [
+					"$mainMod, mouse:272, movewindow"
+					"$mainMod, mouse:273, resizewindow"
 				];
 			};
 		};
