@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 {
   options = {
     nixvim.enable = lib.mkEnableOption "enables nixvim";
@@ -23,6 +23,20 @@
 	copilot-vim.enable = true;
 	fugitive.enable = true;
 	indent-blankline.enable = true;
+
+	# Obsidian
+	obsidian = {
+	  enable = true;
+
+	  settings = {
+	    workspaces = [
+	      {
+		name = "Notes";
+		path = "~/Nextcloud/Notes/";
+	      }
+	    ];
+	  };
+	};
 
 	harpoon = {
 	  enable = true;
@@ -90,6 +104,9 @@
     	};
       };
 
+      extraPlugins = with pkgs.vimPlugins; [
+	LanguageTool-nvim
+      ];
 
       keymaps = [
 	# Open explorer
