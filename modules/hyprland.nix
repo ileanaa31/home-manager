@@ -9,8 +9,8 @@
 			enable = true;
 	
 			settings = {
-				"$terminal" = "kitty";
-				"$fileManager" = "dolphin";
+				"$terminal" = "alacritty";
+				"$fileManager" = "nautilus";
 				"$menu" = "rofi -show drun -show-icons";
 	
 				exec-once = [

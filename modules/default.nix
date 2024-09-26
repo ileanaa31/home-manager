@@ -1,5 +1,6 @@
 {
   imports = [
+    ./bmofetch.nix
     ./gtk.nix
     ./hyprland.nix
     ./hyprlock.nix

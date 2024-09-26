@@ -6,11 +6,14 @@
   home.username = "anton";
   home.homeDirectory = "/home/anton";
 
+  # Shells
+  programs.bash.enable = true;
+
   # Some modules of my own
+  bmofetch.enable = true;
   gtkTheme.enable = true;
   hyprland.enable = true;
   hyprlock.enable = true;
-  kitty.enable = true;
   nixvim.enable = true;
   rofi.enable = true;
 
