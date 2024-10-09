@@ -45,7 +45,7 @@
 	
 					layout = "dwindle";
 				};
-	
+
 				dwindle = {
 					pseudotile = true;
 					preserve_split = true;
@@ -103,13 +103,10 @@
 				bind = [
 					"$mainMod, T, exec, $terminal"
 					"$mainMod, Q, killactive"
-					"$mainMod, M, exit"
 					"$mainMod, L, exec, hyprlock"
 					"$mainMod, E, exec, $fileManager"
 					"$mainMod, V, togglefloating"
 					"$mainMod, R, exec, $menu"
-					"$mainMod, P, pseudo"
-					"$mainMod, J, togglesplit"
 	
 					"$mainMod, F, fullscreen, 1"
 	        			"$mainMod SHIFT, F, fullscreen, 0"
@@ -147,6 +144,9 @@
 	        			"$mainMod SHIFT, 9, movetoworkspace, 9"
 	        			"$mainMod SHIFT, 0, movetoworkspace, 10"
 	
+					# "$mainMod CTRL, M, exec, hyprctl keyword monitor HDMI-A-1, preferred, auto, 1, mirror, eDP-1"
+					# "$mainMod CTRL SHIFT, M, exec, hyprctl keyword monitor HDMI-A-1, preferred, auto, 1"
+
 					", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 					", XF86AudioPlay, exec, playerctl play-pause"
 					", XF86AudioPrev, exec, playerctl previous"
