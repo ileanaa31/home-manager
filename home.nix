@@ -14,7 +14,9 @@
   gtkTheme.enable = true;
   hyprland.enable = true;
   hyprlock.enable = true;
+  # hyprgrass.enable = true;
   nixvim.enable = true;
+  pretty-proto.enable = true;
   rofi.enable = true;
 
   home.stateVersion = "24.05";
