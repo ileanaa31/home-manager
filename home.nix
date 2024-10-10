@@ -11,6 +11,7 @@
 
   # Some modules of my own
   bmofetch.enable = true;
+  dunst.enable = true;
   gtkTheme.enable = true;
   hyprland.enable = true;
   hyprlock.enable = true;
