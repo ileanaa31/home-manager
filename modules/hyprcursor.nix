@@ -9,7 +9,7 @@
 	enable = true;
 
 	settings = {
-	  env = [
+	  env = lib.mkDefault [
 	    "HYPRCURSOR_THEME=Bibata-Modern-Ice"
 	    "XCURSOR_THEME=Bibata-Modern-Ice"
 	  ];
@@ -19,7 +19,7 @@
     # dconf settings
     dconf.settings = {
       "org/gnome/desktop/interface" = { 
-	cursor-theme = "Bibata-Modern-Ice";
+	cursor-theme = lib.mkDefault "Bibata-Modern-Ice";
       };
     };
 

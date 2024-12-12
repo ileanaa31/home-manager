@@ -8,7 +8,7 @@
     programs.rofi = {
       enable = true;
       package = pkgs.rofi-wayland;
-      theme = "custom-theme.rasi";
+      theme = lib.mkDefault "custom-theme.rasi";
     };
         
     home.file.".config/rofi/custom-theme.rasi".source = ./rofi/custom-theme.rasi;

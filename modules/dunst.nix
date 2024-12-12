@@ -15,11 +15,11 @@
       	  offset = "30x30";
       	  origin = "top-right";
       	  transparency = 10;
-      	  frame_color = "#2df598";
+      	  frame_color = lib.mkDefault "#2df598";
 	  frame_width = 2;
 	  min_icon_size = 16;
 	  max_icon_size = 64;
-      	  font = "Ubuntu 10";
+      	  font = lib.mkForce "Ubuntu 10";
 	  dmenu = "rofi -dmenu -i -p dunst";
 	  mouse_left_click = "do_action";
 	  mouse_middle_click = "close_current";
@@ -27,8 +27,8 @@
       	};
     
       	urgency_normal = {
-      	  background = "#121212";
-      	  foreground = "#dddddd";
+      	  background = lib.mkDefault "#121212";
+      	  foreground = lib.mkDefault "#dddddd";
       	  timeout = 10;
       	};
       };

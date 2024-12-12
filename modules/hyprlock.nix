@@ -13,12 +13,12 @@
           	hide_cursor = true;
           	no_fade_in = false;
           };
-      	background = [{
+      	background = lib.mkForce [{
           	path = "screenshot";
           	blur_passes = 3;
           	blur_size = 8;
           }];	
-          input-field = [{
+          input-field = lib.mkForce [{
           	size = "400, 50";
           	position = "0, -20";
           	fade_on_empty = false;

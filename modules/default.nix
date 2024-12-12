@@ -12,6 +12,7 @@
     ./nixvim.nix
     ./pretty-proto.nix
     ./rofi.nix
+    ./stylix.nix
     ./waybar.nix
   ];
 }

@@ -35,8 +35,8 @@
 	
 					border_size = 2;
 	
-					"col.active_border" = "rgb(2df598)";
-					"col.inactive_border" = "rgba(595959aa)";
+					"col.active_border" = lib.mkDefault "rgb(2df598)";
+					"col.inactive_border" = lib.mkDefault "rgba(595959aa)";
 	
 					resize_on_border = false;
 	
@@ -67,7 +67,7 @@
 	
 				decoration = {
 					active_opacity = 1.0;
-					inactive_opacity = 0.9;
+					inactive_opacity = 0.7;
 	
 					blur = {
 						enabled = true;

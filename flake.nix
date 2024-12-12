@@ -11,9 +11,10 @@
         url = "github:nix-community/nixvim/nixos-24.11";
         inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix.url = "github:danth/stylix/release-24.11";
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, stylix, ... }@inputs: {
     homeConfigurations = {
       "anton" = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
@@ -27,6 +28,7 @@
           ./home.nix
           ./modules
 	  inputs.nixvim.homeManagerModules.nixvim
+	  stylix.homeManagerModules.stylix
         ];
       };
     };

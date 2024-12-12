@@ -21,6 +21,7 @@
   nixvim.enable = true;
   pretty-proto.enable = true;
   rofi.enable = true;
+  stylix-theme.enable = true;
   waybar.enable = true;
 
   home.stateVersion = "24.11";

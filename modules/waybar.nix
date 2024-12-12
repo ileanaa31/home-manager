@@ -108,18 +108,18 @@
         }
 
         window#waybar {
-	  background: #212121;
+	  background: #${config.lib.stylix.colors.base01};
 	  border-radius: 0 0 8px 8px;
-	  color: #dddddd;
+	  color: #${config.lib.stylix.colors.base05};
         }
 
         #workspaces button {
 	  padding: 0 2px;
-	  color: #dddddd;
+	  color: #${config.lib.stylix.colors.base05};
         }
 
         #workspaces button.active {
-	  color: #2df598;
+	  color: #${config.lib.stylix.colors.base0D};
         }
 
         #clock,
@@ -130,7 +130,7 @@
         #battery,
 	#tray {
 	  padding: 0 10px;
-	  color: #dddddd;
+	  color: #${config.lib.stylix.colors.base05};
         }
       '';
     };
