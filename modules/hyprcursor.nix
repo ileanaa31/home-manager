@@ -10,13 +10,22 @@
 
 	settings = {
 	  env = [
-	    "HYPRCURSOR_THEME=hypr_Bibata_Modern_Ice"
+	    "HYPRCURSOR_THEME=Bibata-Modern-Ice"
+	    "XCURSOR_THEME=Bibata-Modern-Ice"
 	  ];
 	};
     };
 
+    # dconf settings
+    dconf.settings = {
+      "org/gnome/desktop/interface" = { 
+	cursor-theme = "Bibata-Modern-Ice";
+      };
+    };
+
+
     home.file.".local/share/icons" = {
-      source = ./icons;
+      source = ./.icons;
       recursive = true;
     };
   };

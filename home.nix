@@ -15,7 +15,7 @@
   gtkTheme.enable = true;
   hyprland.enable = true;
   hyprlock.enable = true;
-  # hyprcursor.enable = true;
+  hyprcursor.enable = true;
   # hyprgrass.enable = true;
   hyprpaper.enable = true;
   nixvim.enable = true;
