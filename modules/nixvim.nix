@@ -25,6 +25,7 @@
 	copilot-vim.enable = true;
 	fugitive.enable = true;
 	indent-blankline.enable = true;
+	web-devicons.enable = true;
 
 	# Obsidian
 	obsidian = {
@@ -40,6 +41,16 @@
 	  };
 	};
 
+	# rich presence
+	presence-nvim = {
+	  enable = true;
+
+	  autoUpdate = true;
+	  mainImage = "file";
+	  neovimImageText = "Nixvim";
+	};
+
+	# harpoon
 	harpoon = {
 	  enable = true;
 
@@ -60,11 +71,19 @@
 	  enable = true;
 
 	  servers = {
-	    nil-ls.enable = true;
-	    tsserver.enable = true;
+	    nil_ls.enable = true;
+	    nixd.enable = true;
+	    ts_ls.enable = true;
 	    pylsp.enable = true;
+	    ccls.enable = true;
 	  };
 	};
+	
+	lsp-lines = {enable = true;};
+	lsp-format = {
+    	  enable = true;
+    	  lspServersToEnable = "all";
+    	};
 
 	# Completion
 	cmp = {
@@ -148,6 +167,12 @@
 	  key = "<leader>f";
 	  action = "vim.lsp.buf.format";
 	  options.silent = true;
+	}
+
+	# LSP Diagnostics
+	{
+	  action = "<cmd>Telescope diagnostics bufnr=1<CR>";
+	  key = "<leader>D";
 	}
 
 	# Telescope

@@ -17,9 +17,9 @@
       	  transparency = 10;
       	  frame_color = "#2df598";
 	  frame_width = 2;
-	  min_icon_size = 64;
+	  min_icon_size = 16;
 	  max_icon_size = 64;
-      	  font = "Ubuntu";
+      	  font = "Ubuntu 10";
 	  dmenu = "rofi -dmenu -i -p dunst";
 	  mouse_left_click = "do_action";
 	  mouse_middle_click = "close_current";
