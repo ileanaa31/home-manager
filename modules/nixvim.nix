@@ -130,6 +130,13 @@
       ];
 
       keymaps = [
+	# Open zathura
+	{
+	  mode = "n";
+	  key = "<leader>za";
+	  action = "<cmd>!zathura \"$(echo '%' | sed -E 's/^(.*)\\.(tex|md)$/\\1.pdf/g')\" & disown<CR><CR>";
+	}
+
 	# Open explorer
         {
 	  mode = "n";
