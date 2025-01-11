@@ -5,7 +5,7 @@ let
   prettyGit = builtins.fetchGit {
     url = "https://github.com/Pantonius/pretty-proto.git";
     ref = "main";
-    rev = "2d94294ea52e042424938735a3e6d58bf9b915cb";
+    rev = "7d504ed977d9f1e7041fd64b9f0d08b1c4e007cd";
   };
 in
 {
