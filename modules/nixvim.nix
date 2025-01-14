@@ -76,6 +76,8 @@
 	    ts_ls.enable = true;
 	    pylsp.enable = true;
 	    ccls.enable = true;
+	    bashls.enable = true;
+	    jsonls.enable = true;
 	  };
 	};
 	
@@ -130,6 +132,13 @@
       ];
 
       keymaps = [
+	# Compile tex file with xelatex
+	{
+	  mode = "n";
+	  key = "<leader>cx";
+	  action = ":w<CR><cmd>!xelatex %<CR>";
+	}
+
 	# Open zathura
 	{
 	  mode = "n";
