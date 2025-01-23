@@ -44,6 +44,12 @@
 	  "clock" = {
 	    format = "{:%H:%M}";
 	    on-click = "firefox --new-tab https://calendar.proton.me";
+	    tooltip-format = "{calendar}";
+	    calendar = {
+	      format = {
+		today = "<span background='#${config.lib.stylix.colors.base0D}' color='#${config.lib.stylix.colors.base00}'><b>{}</b></span>";
+	      };
+	    };
 	  };
 
 	  "tray" = {
