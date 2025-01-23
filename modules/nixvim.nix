@@ -139,6 +139,7 @@
 	  action = ":w<CR><cmd>!xelatex %<CR>";
 	}
 
+
 	# Open zathura
 	{
 	  mode = "n";
