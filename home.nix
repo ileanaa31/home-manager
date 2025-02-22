@@ -9,18 +9,35 @@
   # Shells
   programs.bash.enable = true;
 
+
   # Some modules of my own
+  ## Git
+  git.enable = true;
+
+  ## Neofetch but different
   bmofetch.enable = true;
+
+  ## Notification Manager Config
   dunst.enable = true;
   gtkTheme.enable = true;
+
+  ## Hyprland Config
   hyprland.enable = true;
   hyprlock.enable = true;
   hyprcursor.enable = true;
   # hyprgrass.enable = true;
   hyprpaper.enable = true;
+
+  ## Neovim Config
   nixvim.enable = true;
+
+  ## Pretty Proto Config
   pretty-proto.enable = true;
+
+  ## Rofi Config
   rofi.enable = true;
+
+  ## Style Config
   stylix-theme.enable = true;
   waybar.enable = true;
 

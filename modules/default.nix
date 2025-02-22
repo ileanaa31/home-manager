@@ -2,6 +2,7 @@
   imports = [
     ./bmofetch.nix
     ./dunst.nix
+    ./git.nix
     ./gtk.nix
     ./hyprland.nix
     ./hyprlock.nix
