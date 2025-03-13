@@ -16,7 +16,7 @@ in
   config = lib.mkIf config.pretty-proto.enable {
     # add aliases
     home.shellAliases = {
-      pretty = "sh ${prettyGit}/proto.sh";
+      "pp" = "sh ${prettyGit}/proto.sh";
     };
   };
 }

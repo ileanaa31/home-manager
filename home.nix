@@ -9,8 +9,10 @@
   # Shells
   programs.bash.enable = true;
 
-
   # Some modules of my own
+  ## Terminal
+  alacritty.enable = true;
+
   ## Git
   git.enable = true;
 
@@ -18,8 +20,8 @@
   bmofetch.enable = true;
 
   ## Notification Manager Config
-  dunst.enable = true;
-  gtkTheme.enable = true;
+  # dunst.enable = true;
+  # gtkTheme.enable = true;
 
   ## Hyprland Config
   hyprland.enable = true;
@@ -40,6 +42,7 @@
   ## Style Config
   stylix-theme.enable = true;
   waybar.enable = true;
+  # hyprpanel.enable = true;
 
   home.stateVersion = "24.11";
 

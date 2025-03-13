@@ -1,5 +1,6 @@
 {
   imports = [
+    ./alacritty.nix
     ./bmofetch.nix
     ./dunst.nix
     ./git.nix
@@ -9,11 +10,13 @@
     ./hyprcursor.nix
     ./hyprgrass.nix
     ./hyprpaper.nix
+    # ./hyprpanel.nix
     ./kitty.nix
     ./nixvim.nix
     ./pretty-proto.nix
     ./rofi.nix
     ./stylix.nix
     ./waybar.nix
+    ./zsh.nix
   ];
 }

@@ -1,9 +1,13 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 {
   options = {
     nixvim.enable = lib.mkEnableOption "enables nixvim";
   };
-
 
   config = lib.mkIf config.nixvim.enable {
     programs.ripgrep.enable = true; # Required for Telescope
@@ -13,7 +17,7 @@
       defaultEditor = true;
 
       colorschemes = {
-	      nord.enable = true;
+        nord.enable = true;
       };
 
       globals.mapleader = " ";
@@ -52,62 +56,63 @@
             desc = "Toggle autoformat-on-save",
             bang = true,
           })
-      '';
+        '';
       plugins = {
-	      lualine.enable = true;
-	      treesitter.enable = true;
-	      telescope.enable = true;
+        lualine.enable = true;
+        treesitter.enable = true;
+        telescope.enable = true;
 
-	      fugitive.enable = true;
-	      indent-blankline.enable = true;
-	      web-devicons.enable = true;
+        fugitive.enable = true;
+        indent-blankline.enable = true;
+        web-devicons.enable = true;
 
-	      # rich presence
-	      presence-nvim = {
-	        enable = true;
+        # rich presence
+        presence-nvim = {
+          enable = true;
 
-	        autoUpdate = true;
-	        mainImage = "file";
-	        neovimImageText = "Nixvim";
-	      };
+          autoUpdate = true;
+          mainImage = "file";
+          neovimImageText = "Nixvim";
+        };
 
-	      # harpoon
-	      harpoon = {
-	        enable = true;
+        # harpoon
+        harpoon = {
+          enable = true;
 
-	        keymaps = {
-	          addFile = "<leader>a";
-	          toggleQuickMenu = "<C-e>";
-	          navFile = {
-	            "1" = "<A-1>";
-	            "2" = "<A-2>";
-	            "3" = "<A-3>";
-	            "4" = "<A-4>";
-	          };
-	        };
-	      };
+          keymaps = {
+            addFile = "<leader>a";
+            toggleQuickMenu = "<C-e>";
+            navFile = {
+              "1" = "<A-1>";
+              "2" = "<A-2>";
+              "3" = "<A-3>";
+              "4" = "<A-4>";
+            };
+          };
+        };
 
-	      # Language Servers
-	      lsp = {
-	        enable = true;
+        # Language Servers
+        lsp = {
+          enable = true;
           inlayHints = true;
 
-	        servers = {
-	          nil_ls.enable = true;
-	          nixd.enable = true;     # Nix
-	          ts_ls.enable = true;    # Typescript
-	          pylsp.enable = true;    # Python
-	          ccls.enable = true;     # C/C++
-            rust_analyzer = {       # Rust
+          servers = {
+            nil_ls.enable = true;
+            nixd.enable = true; # Nix
+            ts_ls.enable = true; # Typescript
+            pylsp.enable = true; # Python
+            ccls.enable = true; # C/C++
+            rust_analyzer = {
+              # Rust
               enable = true;
               installCargo = true;
               installRustc = true;
             };
             erlangls.enable = true; # Erlang
-            ltex.enable = true;     # Latex
-	          bashls.enable = true;   # Bash
-	          jsonls.enable = true;   # JSON
-	        };
+            texlab.enable = true; # Latex
+            bashls.enable = true; # Bash
+            jsonls.enable = true; # JSON
+          };
 
           keymaps = {
             silent = true;
@@ -161,15 +166,15 @@
               };
             };
           };
-	      };
-	      
-	      lsp-lines = {
+        };
+
+        lsp-lines = {
           enable = true;
         };
 
-	      lsp-format = {
+        lsp-format = {
           enable = true;
-      	};
+        };
 
         conform-nvim = {
           enable = true;
@@ -242,23 +247,23 @@
           };
         };
 
-	      # Completion
-	      cmp = {
-	        enable = true;
+        # Completion
+        cmp = {
+          enable = true;
 
-	        settings = {
-	          autoEnableSources = true;
-	        
-	          sources = [
+          settings = {
+            autoEnableSources = true;
+
+            sources = [
               { name = "git"; }
-	            { name = "nvim_lsp"; }
+              { name = "nvim_lsp"; }
               # { name = "copilot"; }
               { name = "buffer"; }
-	            { name = "path"; }
-	          ];
+              { name = "path"; }
+            ];
 
-	          mapping = {
-	            "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+            mapping = {
+              "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
               "<C-j>" = "cmp.mapping.select_next_item()";
               "<C-k>" = "cmp.mapping.select_prev_item()";
               "<C-e>" = "cmp.mapping.abort()";
@@ -267,9 +272,9 @@
               "<C-Space>" = "cmp.mapping.complete()";
               "<CR>" = "cmp.mapping.confirm({ select = true })";
               "<S-CR>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
-	          };
-	        };
-	      };
+            };
+          };
+        };
 
         copilot-cmp = {
           enable = true;
@@ -282,73 +287,76 @@
           panel.enabled = false;
         };
 
-	      cmp-nvim-lsp = {
-	        enable = true; # LSP
+        cmp-nvim-lsp = {
+          enable = true; # LSP
         };
 
         cmp-buffer = {
           enable = true;
         };
 
-  	    cmp-path = {
-  	      enable = true; # file system paths
-  	    };
+        cmp-path = {
+          enable = true; # file system paths
+        };
       };
 
       extraPlugins = with pkgs.vimPlugins; [
-	      LanguageTool-nvim
-	      vimtex
+        LanguageTool-nvim
+        vimtex
       ];
 
       keymaps = [
-	      # Compile tex file with xelatex
-	      {
-	        mode = "n";
-	        key = "<leader>cx";
-	        action = ":VimtexCompile<CR>";
-	      }
-
-	      # Open explorer
+        # Compile tex file with xelatex
         {
-	        mode = "n";
-	        key = "<leader>pv";
-	        action = "<cmd>Ex<CR>";
-	      }
+          mode = "n";
+          key = "<leader>cx";
+          action = ":VimtexCompile<CR>";
+        }
 
-	      # move lines up and down in visual mode
-	      {
-	        mode = "v";
-	        key = "J";
-	        action = ":m '>+1<CR>gv=gv";
-	      }
-	      {
-	        mode = "v";
-	        key = "K";
-	        action = ":m '<-2<CR>gv=gv";
-	      }
+        # Open explorer
+        {
+          mode = "n";
+          key = "<leader>pv";
+          action = "<cmd>Ex<CR>";
+        }
 
-	      # copy to clipboard
-	      {
-	        mode = ["n" "v"];
-	        key = "<leader>y";
-	        action = "+y";
-	      }
-	      {
-	        mode = "n";
-	        key = "<leader>Y";
-	        action = "+Y";
-	      }
+        # move lines up and down in visual mode
+        {
+          mode = "v";
+          key = "J";
+          action = ":m '>+1<CR>gv=gv";
+        }
+        {
+          mode = "v";
+          key = "K";
+          action = ":m '<-2<CR>gv=gv";
+        }
 
-	      # LSP Diagnostics
-	      {
-	        action = "<cmd>Telescope diagnostics bufnr=1<CR>";
-	        key = "<leader>D";
-	      }
+        # copy to clipboard
+        {
+          mode = [
+            "n"
+            "v"
+          ];
+          key = "<leader>y";
+          action = "+y";
+        }
+        {
+          mode = "n";
+          key = "<leader>Y";
+          action = "+Y";
+        }
 
-	      # Telescope
-	      {
-	        action = "<cmd>Telescope live_grep<CR>";
-	        key = "<leader>fw";
+        # LSP Diagnostics
+        {
+          action = "<cmd>Telescope diagnostics bufnr=1<CR>";
+          key = "<leader>D";
+        }
+
+        # Telescope
+        {
+          action = "<cmd>Telescope live_grep<CR>";
+          key = "<leader>fw";
         }
         {
           action = "<cmd>Telescope find_files<CR>";
@@ -379,24 +387,24 @@
       ];
 
       clipboard = {
-	      providers.wl-copy.enable = true;
+        providers.wl-copy.enable = true;
       };
 
       opts = {
-        number = true;         # Show line numbers
+        number = true; # Show line numbers
         relativenumber = true; # Show relative line numbers
 
-	      tabstop = 2;           # Tab width should be 2 spaces
-	      softtabstop = 2;       
-	      showtabline = 2;
-	      expandtab = true;	# Use spaces instead of tabs
+        tabstop = 2; # Tab width should be 2 spaces
+        softtabstop = 2;
+        showtabline = 2;
+        expandtab = true; # Use spaces instead of tabs
 
-	      smartindent = true;
-	      shiftwidth = 2;        # Indentation should be 2 spaces
-	      breakindent = true;    
+        smartindent = true;
+        shiftwidth = 2; # Indentation should be 2 spaces
+        breakindent = true;
 
-	      clipboard = "unnamedplus"; # Use system clipboard
+        clipboard = "unnamedplus"; # Use system clipboard
       };
-    };	
+    };
   };
 }
