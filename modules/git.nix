@@ -8,9 +8,6 @@
     programs.git = {
       enable = true;
 
-      userName = "Anton Pogrebnjak";
-      userEmail = "contact@pantonius.dev";
-
       aliases = {
         "history" = "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short";
       };

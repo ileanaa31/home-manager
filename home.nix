@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "anton";
-  home.homeDirectory = "/home/anton";
+  home.username = "ilay";
+  home.homeDirectory = "/home/ilay";
 
   # Shells
   programs.bash.enable = true;

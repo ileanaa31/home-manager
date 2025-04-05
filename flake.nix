@@ -29,7 +29,7 @@
     in
     {
       homeConfigurations = {
-        "anton" = home-manager.lib.homeManagerConfiguration {
+        "ilay" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             system = "x86_64-linux";
             config = {
