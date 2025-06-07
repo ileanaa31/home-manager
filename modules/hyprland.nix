@@ -14,7 +14,8 @@
         "$menu" = "rofi -show drun -show-icons";
 
         exec-once = [
-          "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP hyprsunset"
+          "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+          "hyprsunset --temperature 4500"
         ];
 
         monitor = [
@@ -27,18 +28,6 @@
         env = [
           "XCURSOR_SIZE,24"
           "HYPRCURSOR_SIZE,24"
-        ];
-
-        hyprsunset=[
-          # Enable blue-light filter
-          hyprctl hyprsunset temperature 2500
-          # Disable blue-light filter
-          hyprctl hyprsunset identity
-
-          # Set gamma to 50%
-          hyprctl hyprsunset gamma 50
-          # Increase gamma by 10%
-          hyprctl hyprsunset gamma +10
         ];
 
         general = {

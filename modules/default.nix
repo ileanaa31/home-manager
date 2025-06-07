@@ -11,6 +11,7 @@
     ./hyprgrass.nix
     ./hyprpaper.nix
     # ./hyprpanel.nix
+    # ./hyprsunset.nix
     ./kitty.nix
     ./nixvim.nix
     ./pretty-proto.nix

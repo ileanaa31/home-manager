@@ -29,6 +29,7 @@
   hyprcursor.enable = true;
   # hyprgrass.enable = true;
   hyprpaper.enable = true;
+  # hyprsunset.enable = true;
 
   ## Neovim Config
   nixvim.enable = true;
