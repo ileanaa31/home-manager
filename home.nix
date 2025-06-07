@@ -40,7 +40,7 @@
   rofi.enable = true;
 
   ## Style Config
-  stylix-theme.enable = true;
+  # stylix-theme.enable = true;
   waybar.enable = true;
   # hyprpanel.enable = true;
 

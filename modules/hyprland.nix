@@ -14,18 +14,31 @@
         "$menu" = "rofi -show drun -show-icons";
 
         exec-once = [
-          "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+          "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP hyprsunset"
         ];
 
         monitor = [
           "eDP-1,1920x1200@60,0x0,1"
           "desc:Dell Inc. DELL U2723QE 6DCGH34,preferred,auto,1.5"
+          "desc:HannStar Display Corp HZ281H 018LM3AY00620,preferred,auto,1"
           ",preferred,auto,1"
         ];
 
         env = [
           "XCURSOR_SIZE,24"
           "HYPRCURSOR_SIZE,24"
+        ];
+
+        hyprsunset=[
+          # Enable blue-light filter
+          hyprctl hyprsunset temperature 2500
+          # Disable blue-light filter
+          hyprctl hyprsunset identity
+
+          # Set gamma to 50%
+          hyprctl hyprsunset gamma 50
+          # Increase gamma by 10%
+          hyprctl hyprsunset gamma +10
         ];
 
         general = {
@@ -148,6 +161,8 @@
           ", XF86AudioPlay, exec, playerctl play-pause"
           ", XF86AudioPrev, exec, playerctl previous"
           ", XF86AudioNext, exec, playerctl next"
+          ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+          ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
 
           ", Print, exec, grim -g \"$(slurp)\" - | wl-copy"
         ];

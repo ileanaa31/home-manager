@@ -51,7 +51,7 @@
             tooltip-format = "{calendar}";
             calendar = {
               format = {
-                today = "<span background='#${config.lib.stylix.colors.base0D}' color='#${config.lib.stylix.colors.base00}'><b>{}</b></span>";
+                today = "<span background='#212121' color='#121212'><b>{}</b></span>";
               };
             };
           };
@@ -118,18 +118,18 @@
                 }
 
                 window#waybar {
-        	  background: #${config.lib.stylix.colors.base01};
+        	  background: #212121;
         	  border-radius: 0 0 8px 8px;
-        	  color: #${config.lib.stylix.colors.base05};
+        	  color: #C8E1F8;
                 }
 
                 #workspaces button {
         	  padding: 0 2px;
-        	  color: #${config.lib.stylix.colors.base05};
+        	  color: #C8E1F8;
                 }
 
                 #workspaces button.active {
-        	  color: #${config.lib.stylix.colors.base0D};
+        	  color: #2DF598;
                 }
 
                 #clock,
@@ -140,7 +140,7 @@
                 #battery,
         	#tray {
         	  padding: 0 10px;
-        	  color: #${config.lib.stylix.colors.base05};
+        	  color: #C8E1F8 ;
                 }
       '';
     };
