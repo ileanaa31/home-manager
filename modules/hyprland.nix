@@ -31,8 +31,8 @@
         ];
 
         general = {
-          gaps_in = 5;
-          gaps_out = 10;
+          gaps_in = 0; # gaps between widows
+          gaps_out = 0; # gaps around screen edges
 
           border_size = 2;
 
@@ -68,7 +68,7 @@
 
         decoration = {
           active_opacity = 1.0;
-          inactive_opacity = 0.7;
+          inactive_opacity = 0.9;
 
           blur = {
             enabled = true;
