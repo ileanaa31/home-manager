@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -26,8 +26,6 @@
   ## Hyprland Config
   hyprland.enable = true;
   hyprlock.enable = true;
-  hyprcursor.enable = true;
-  # hyprgrass.enable = true;
   hyprpaper.enable = true;
   # hyprsunset.enable = true;
 
@@ -44,6 +42,15 @@
   # stylix-theme.enable = true;
   waybar.enable = true;
   # hyprpanel.enable = true;
+
+  home.pointerCursor = {
+    enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
+    hyprcursor.enable = true;
+    gtk.enable = true;
+    x11.enable = true;
+  };
 
   home.stateVersion = "25.05";
 

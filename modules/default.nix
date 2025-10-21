@@ -7,8 +7,6 @@
     ./gtk.nix
     ./hyprland.nix
     ./hyprlock.nix
-    ./hyprcursor.nix
-    ./hyprgrass.nix
     ./hyprpaper.nix
     # ./hyprpanel.nix
     # ./hyprsunset.nix
