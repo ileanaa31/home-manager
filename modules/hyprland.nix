@@ -22,8 +22,8 @@
           "eDP-1,1920x1200@60,0x0,1"
           "desc:Dell Inc. DELL U2723QE 6DCGH34,preferred,auto,1.5"
           "desc:HannStar Display Corp HZ281H 018LM3AY00620,preferred,auto,1"
+          # "desc:Sharp Corporation PN-80TC3 0x09284A0B, preferred, auto, 1, mirror, eDP-1"
           ",preferred,auto,1"
-          "desc:Sharp Corporation PN-80TC3 0x09284A0B, preferred, auto, 1, mirror, eDP-1"
         ];
 
         env = [
@@ -61,10 +61,6 @@
           touchpad = {
             natural_scroll = true;
           };
-        };
-
-        gestures = {
-          workspace_swipe = false;
         };
 
         decoration = {

@@ -67,7 +67,7 @@
         web-devicons.enable = true;
 
         # rich presence
-        presence-nvim = {
+        presence = {
           enable = true;
 
           autoUpdate = true;
@@ -108,7 +108,6 @@
               installCargo = true;
               installRustc = true;
             };
-            erlangls.enable = true; # Erlang
             texlab.enable = true; # Latex
             bashls.enable = true; # Bash
             jsonls.enable = true; # JSON
